@@ -1,0 +1,106 @@
+@import "/src/app/styles/icons";
+@import "/src/app/styles/variables";
+
+
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feedback {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: [first] 104px [main] auto [last] 90px;
+  padding: 0 0 23px;
+  &:hover {
+    .title a {
+      color: $primaryHover;
+    }
+  }
+}
+
+.upvotes {
+  grid-column: first / main;
+  grid-row: 1/ 4;
+  justify-self: center;
+  padding-top: 23px;
+  button {
+    min-width: 53px;
+    height: 53px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    background:gray;
+    transition: all .2s;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 700;
+    letter-spacing: -.18px;
+    padding: 18px 0 0;
+    border-radius: 50%;
+    i {
+      width: 10px;
+      height: 6px;
+      background: url("data:image/svg+xml, #{$arrow-up-blue}") no-repeat;
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+    }
+    &:hover {
+      background: $btnUpvoteHover;
+    }
+  }
+}
+
+.read-more {
+  outline: none;
+    border: 0px;
+    background: none;
+    cursor: pointer;
+}
+
+h3 {
+  grid-column: main / last;
+}
+
+.description {
+  grid-column: main / last;
+  color: $primaryLight;
+  margin-bottom: 11px;
+}
+
+.category {
+  grid-column: main / last;
+}
+
+  .count {
+    color:beige;
+    
+  }
+
+
+.center {
+  padding: 18px 0 0 9px;
+}
+
+.title {
+  margin-bottom: 0;
+  a {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -.25px;
+    font-weight: 700;
+    transition: all .2s;
+  }
+}
+.limitTextHeight {
+  height: 20px;
+  overflow: hidden;
+}

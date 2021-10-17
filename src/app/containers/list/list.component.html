@@ -1,0 +1,43 @@
+<div  >
+  <ul class="list">
+  <li  *ngFor="let feedback of feedbackList" class="feedback" style="border-radius: 40px;">
+    <div class="upvotes">
+      <button>
+        <strong class="count" style="margin-bottom: 20px;">5</strong>
+      </button>
+      <div>
+        <h5 class="username" style="margin-top: 40px;">
+          <h2>Yoda</h2>
+          <h5>15/10/2021</h5>
+        </h5>
+      </div>
+    </div>
+  
+    <div [ngClass]="{'limitTextHeight': isReadMore}" style="margin-left: 20px;">
+     
+      <p class="description">
+        How do u rate UI ?
+      </p>
+      <p class="description">
+        How do u rate features ?
+      </p>
+      <p class="description">
+        How do u rate accessibility ?
+      </p>
+      <p class="description">
+        How do u rate idea ?
+      </p>
+      <p read-more class="descriptivefeedback">
+        NA Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :) Start editing to see some magic happen :)  </p>
+    </div>
+    <a style="margin-top: 50px;  " (click)="showText()">
+      {{ isReadMore ? 'Read More': 'Read Less' }}
+    </a>
+
+  </li>
+  
+</ul>
+</div>
+
+
+
